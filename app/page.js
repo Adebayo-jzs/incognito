@@ -5,8 +5,8 @@ import Hero from '@/components/sections/Hero';
 import React from 'react';
 import GetToKnow from '@/components/sections/get-to-know';
 import Footer from '@/components/Footer';
-import { Bolt, ContentCopy, LinkOutlined, Security, ShareSharp, Sms } from '@mui/icons-material';
-import { ChartAreaIcon, Filter, Link, LinkIcon, Share, Share2, ShareIcon } from 'lucide-react';
+import { Bolt, ContentCopy, LinkOutlined, Security, ShareSharp, Sms ,Download} from '@mui/icons-material';
+import { ChartAreaIcon, Filter} from 'lucide-react';
 // If using Next.js, use: import Link from 'next/link';
 // If using Next.js, you might handle fonts in layout.js, but for now links are included below.
 
@@ -17,8 +17,9 @@ export default function TextcognitoLanding() {
     {id:3,title:"Easy Sharing",text:"Share your link on social media with one click. Works everywhere!",color: "text-green-400", bg: "bg-green-500/10", hover: "group-hover:bg-green-500/20",Icon:ShareSharp},
     {id:4,title:"Instant Delivery",text:"Receive messages instantly with real-time notifications. Never miss a message!",color: "text-red-400",bg: "bg-red-500/10", hover: "group-hover:bg-red-500/20",Icon:Bolt},
     {id:5,title:"Analytics",text:"Track views, messages received, and engagement stats in your dashboard.",color: "text-violet-400", bg: "bg-violet-500/10", hover: "group-hover:bg-violet-500/20",Icon:ChartAreaIcon},
-    {id:6,title:"Custom Link",text:"Get your personalized link like textcognito.com/yourname. Easy to remember and share!",color: "text-purple-400", bg: "bg-purple-500/10",hover: "group-hover:bg-purple-500/20",Icon:LinkIcon},
+    {id:6,title:"Custom Link",text:"Get your personalized link like textcognito.com/yourname. Easy to remember and share!",color: "text-purple-400", bg: "bg-purple-500/10",hover: "group-hover:bg-purple-500/20",Icon:LinkOutlined},
   ]
+  const shareLink = `${process.env.NEXT_PUBLIC_SITE_URL}/u/yourusername`
   return (
      
     <div className="transition-colors duration-300 overflow-x-hidden font-display">
@@ -42,10 +43,11 @@ export default function TextcognitoLanding() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <button className="bg-[#8f48ec] hover:bg-[#8c4aea] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#8f48ec]/25 hover:shadow-[#8f48ec]/40 flex items-center gap-2">
-                  Get Your Link Free
+                  Get Your Free Link
                 </button>
                 <button className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-bold transition-all">
-                  See How It Works
+                  Download the app!
+                  <span><Download/></span>
                 </button>
               </div>
               <div className="mt-12 flex gap-12 border-t border-white/5 text-white pt-8">
@@ -84,8 +86,9 @@ export default function TextcognitoLanding() {
                 </div>
                 <div className="bg-[#0f0f0f]/50 rounded-xl p-4 mb-6 border border-white/5 flex justify-between items-center">
                   <span className="text-[#8f48ec] text-sm font-medium">
-                    textcognito.xyz/u/yourname
+                    {shareLink}
                   </span>
+                   
                   <span className="material-symbols-outlined text-gray-400 text-sm cursor-pointer hover:text-white">
                     <ContentCopy fontSize='15'/>
                   </span>
@@ -118,8 +121,8 @@ export default function TextcognitoLanding() {
 
 
 
-      <section className="pt-20 pb-32 relative bg-[#121212]  px-6">
-        <div className="text-white text-center mt-6 mb-16 max-w-2xl mx-auto">
+      <section className="py-20 relative bg-[#121212]  px-6">
+        <div className="text-white text-center  mb-16 max-w-2xl mx-auto">
           <p className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8f48ec]/10 border border-[#8f48ec]/20 text-[#8f48ec] text-xs font-semibold">
             FEATURES
           </p>
