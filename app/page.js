@@ -7,6 +7,7 @@ import GetToKnow from '@/components/sections/get-to-know';
 import Footer from '@/components/Footer';
 import { Bolt, ContentCopy, LinkOutlined, Security, ShareSharp, Sms ,Download, AppRegistration} from '@mui/icons-material';
 import { ChartAreaIcon, Filter} from 'lucide-react';
+import Link from 'next/link';
 // If using Next.js, use: import Link from 'next/link';
 // If using Next.js, you might handle fonts in layout.js, but for now links are included below.
 
@@ -33,7 +34,7 @@ export default function TextcognitoLanding() {
                 <span className="text-sm"><Bolt fontSize='15'/></span>
                 Anonymous messaging made simple
               </div>
-              <h1 className="text-5xl lg:text-6xl text-primary-foreground  font-black tracking-tight leading-[1.1] mb-6 ">
+              <h1 className="text-5xl lg:text-6xl text-white  font-black tracking-tight leading-[1.1] mb-6 ">
                 Receive <br />
                 <span className="bg-gradient-to-br from-[#8f48ec] to-[#a855f7] bg-clip-text text-transparent">
                   Anonymous Messages
@@ -45,13 +46,13 @@ export default function TextcognitoLanding() {
                 anonymous messages. Safe, simple, and fun!
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-[#8f48ec] hover:bg-[#8c4aea] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#8f48ec]/25 hover:shadow-[#8f48ec]/40 flex items-center gap-2">
+                <Link className="bg-[#8f48ec] hover:bg-[#8c4aea] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#8f48ec]/25 hover:shadow-[#8f48ec]/40 flex items-center gap-2" href="/auth/sign-up">
                   Get Your Free Link
-                </button>
-                <button className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-bold transition-all">
+                </Link>
+                <Link href={"/download"} className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-bold transition-all">
                   Download the app!
                   <span><Download/></span>
-                </button>
+                </Link>
               </div>
               <div className="mt-12 flex gap-12 border-t border-white/5 text-white pt-8">
                 <div>
@@ -161,10 +162,10 @@ export default function TextcognitoLanding() {
             </div>
             <div className="h-48 bg-[#121212] rounded-xl mb-6 overflow-hidden flex items-center justify-center relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8f48ec]/10 to-transparent"></div>
-              <div class="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
-            <div class="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
-            <div class="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
-            <span class=" text-4xl text-indigo-300"><AppRegistration/></span>
+              <div className="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
+            <div className="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
+            <div className="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
+            <span className=" text-4xl text-indigo-300"><AppRegistration/></span>
             </div>
             </div>
             </div>
@@ -179,10 +180,10 @@ export default function TextcognitoLanding() {
             </div>
             <div className="h-48 bg-[#121212] rounded-xl mb-6 overflow-hidden flex items-center justify-center relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#8f48ec]/10 to-transparent"></div>
-              <div class="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
-            <div class="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
-            <div class="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
-            <span class=" text-4xl text-indigo-300"><ShareSharp/></span>
+              <div className="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
+            <div className="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
+            <div className="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
+            <span className=" text-4xl text-indigo-300"><ShareSharp/></span>
             </div>
             </div>
             </div>
