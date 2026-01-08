@@ -5,7 +5,7 @@ import Hero from '@/components/sections/Hero';
 import React from 'react';
 import GetToKnow from '@/components/sections/get-to-know';
 import Footer from '@/components/Footer';
-import { Bolt, ContentCopy, LinkOutlined, Security, ShareSharp, Sms ,Download} from '@mui/icons-material';
+import { Bolt, ContentCopy, LinkOutlined, Security, ShareSharp, Sms ,Download, AppRegistration} from '@mui/icons-material';
 import { ChartAreaIcon, Filter} from 'lucide-react';
 // If using Next.js, use: import Link from 'next/link';
 // If using Next.js, you might handle fonts in layout.js, but for now links are included below.
@@ -19,6 +19,7 @@ export default function TextcognitoLanding() {
     {id:5,title:"Analytics",text:"Track views, messages received, and engagement stats in your dashboard.",color: "text-violet-400", bg: "bg-violet-500/10", hover: "group-hover:bg-violet-500/20",Icon:ChartAreaIcon},
     {id:6,title:"Custom Link",text:"Get your personalized link like textcognito.com/yourname. Easy to remember and share!",color: "text-purple-400", bg: "bg-purple-500/10",hover: "group-hover:bg-purple-500/20",Icon:LinkOutlined},
   ]
+ 
   const cardSectionClass = "relative ";
   // const cardSectionClass = "relative md:sticky md:top-0 min-h-screen flex flex-col justify-center overflow-hidden";
   const shareLink = `${process.env.NEXT_PUBLIC_SITE_URL}/u/yourusername`
@@ -153,15 +154,60 @@ export default function TextcognitoLanding() {
           <p className="text-gray-400">Start receiving anonymous messages in under a minute.</p>
         </div>
         <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white gap-6">
-          {features.map(feature => (
-            <div key={feature.id} className="bg-[#1a1a1a] p-8 rounded-2xl border border-white/5 hover:border-[#8f48ec]/30 transition-colors group">
-              <div className={`${feature.bg} w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${feature.hover}`}>
-                <feature.Icon className={`  ${feature.color} ${feature.hover}}`} />
-              </div>
-              <h2 className="text-xl   font-bold   mt-6 mb-4 ">{feature.title}</h2>
-              <p>{feature.text}</p>
+           
+          <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-white/5 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8f48ec] rounded-full flex items-center justify-center font-bold shadow-lg shadow-[#8f48ec]/30 border-4 border-[#0f0f0f]">
+              1
             </div>
-          ))}
+            <div className="h-48 bg-[#121212] rounded-xl mb-6 overflow-hidden flex items-center justify-center relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8f48ec]/10 to-transparent"></div>
+              <div class="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
+            <div class="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
+            <div class="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
+            <span class=" text-4xl text-indigo-300"><AppRegistration/></span>
+            </div>
+            </div>
+            </div>
+            <h3 className="text-xl font-bold mb-2">Create Your Account</h3>
+            <p className="text-gray-400 text-sm">
+              Sign up free and claim your unique username. Takes less than 30 seconds!
+            </p>
+          </div>
+          <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-white/5 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8f48ec] rounded-full flex items-center justify-center font-bold shadow-lg shadow-[#8f48ec]/30 border-4 border-[#0f0f0f]">
+              2
+            </div>
+            <div className="h-48 bg-[#121212] rounded-xl mb-6 overflow-hidden flex items-center justify-center relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8f48ec]/10 to-transparent"></div>
+              <div class="w-3/4 h-3/4 bg-[#1a1a1a] rounded-lg shadow-sm overflow-hidden relative">
+            <div class="absolute top-2 left-2 w-full h-4 bg-[#121212] rounded-sm"></div>
+            <div class="absolute top-8 left-2 right-2 bottom-2 bg-indigo-100 rounded-sm flex items-center justify-center">
+            <span class=" text-4xl text-indigo-300"><ShareSharp/></span>
+            </div>
+            </div>
+            </div>
+            <h3 className="text-xl font-bold mb-2">Share your Link</h3>
+            <p className="text-gray-400 text-sm">
+              Share your personalised link on Instagram,X,Tiktok,or anywhere you like up.
+            </p>
+          </div>
+          <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-white/5 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#8f48ec] rounded-full flex items-center justify-center font-bold shadow-lg shadow-[#8f48ec]/30 border-4 border-[#0f0f0f]">
+              3
+            </div>
+            <div className="h-48 bg-[#121212] rounded-xl mb-6 overflow-hidden flex items-center justify-center relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8f48ec]/10 to-transparent"></div>
+              <img
+                alt="Create account"
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL2zkhViSV-AyTPuxXxsnGQDljka--oGETxUyCGZ6FBIcn0MreFvnNN_NCrPU0ozCwrnBIfAETwbYd3ZU1uiPnfIa-VZxnBOKPEM-CJ6--r69pB8MUgkzCqbLJ7c5chiUrSvB0hoQxd5DjGDmV6YOM6nwSBMtIBmbf51x7Eznm2hLuUWSZM9k3UG_o_KGEsQg9oLJqF5Tx8VKOUvzfSOv6C6rdVyPVuzEzhecAxAIzBvULznhX2exwVOy_rSflA9BBRJfsjnv2UDZ0"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Receive Messages</h3>
+            <p className="text-gray-400 text-sm">
+               Get Instant Notifications when friends send you anonymous messages
+            </p>
+          </div>
         </div>
       </section> 
       {/* <Header/> */}
