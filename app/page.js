@@ -23,7 +23,7 @@ export default function TextcognitoLanding() {
   return (
      
     <div className="transition-colors duration-300 overflow-x-hidden font-display">
-      <section className="pt-20 pb-32 relative bg-gradient-to-tr from-[#15121a]  via-[#141118] to-[#1c1425]  ">
+      <section className="pt-20 pb-32 sticky top-0 z-0 bg-gradient-to-tr from-[#15121a]  via-[#141118] to-[#1c1425]  ">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8f48ec]/10 border border-[#8f48ec]/20 text-[#8f48ec] text-xs font-semibold mb-8">
@@ -121,7 +121,7 @@ export default function TextcognitoLanding() {
 
 
 
-      <section className="py-20 relative bg-[#121212]  px-6">
+      <section className="py-20 relative z-10 bg-[#121212]  px-6">
         <div className="text-white text-center  mb-16 max-w-2xl mx-auto">
           <p className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8f48ec]/10 border border-[#8f48ec]/20 text-[#8f48ec] text-xs font-semibold">
             FEATURES
