@@ -1,13 +1,13 @@
 'use client'
 import { useState } from 'react'
-import { createClient } from '@/lib/client'
-// import { createClient } from '@supabase/supabase-js'
+// import { createClient } from '@/lib/client'
+import { createClient } from '@supabase/supabase-js'
 
 // Initialize client-side Supabase (use your env variables)
-// const supabase = createClient(
-//   process.env.NEXT_PUBLIC_SUPABASE_URL, 
-//   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-// )
+const supabase = createClient(
+   process.env.NEXT_PUBLIC_SUPABASE_URL, 
+       process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY
+)
 const supabase = createClient();
 export default function MessageForm({ recipientId }) {
   const [message, setMessage] = useState('')
