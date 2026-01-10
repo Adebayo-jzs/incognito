@@ -22,7 +22,7 @@ export default function DashboardClient({ shareLink, username,messageCount }) {
       try {
         await navigator.share({
           title: 'Textcognito',
-          text: 'Send me an anonymous message!',
+          text: `Send ${username} an anonymous message!`,
           url: shareLink,
         });
       } catch (err) {
@@ -96,7 +96,7 @@ export default function DashboardClient({ shareLink, username,messageCount }) {
             className="bg-gray-800 text-white border border-gray-700 hover:bg-gray-700 p-3.5 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 col-span-2" 
           >
               <span className="text-xl mb-1"><IosShare /></span>
-              More Options / Share
+              Share Link
           </button>
           <a 
             href={`https://twitter.com/intent/tweet?text=Send me an anonymous message!&url=${encodeURIComponent(shareLink)}`}
