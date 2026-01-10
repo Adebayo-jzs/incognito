@@ -36,7 +36,7 @@ export default async function Dashboard() {
      
        
  
-      <section className="flex-grow flex flex-col bg-[#121212] items-center justify-start relative overflow-hidden">
+      <section className="flex-grow flex flex-col bg-[#121212] items-center justify-start relative overflow-hidden pt-20">
         {/* Background Effects */}
     <div className="flex-grow flex flex-col items-center justify-start p-6  ">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-900/40 rounded-full blur-[120px] opacity-50 -z-10"></div>
